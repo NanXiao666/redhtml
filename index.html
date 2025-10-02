@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色文化宣传网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #c00;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 160px;
+            height: 80px;
+            background-image: url(./picture/logo.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcccc;
+        }
+        .banner {
+            width: 1500px;
+            height: 700px;
+            margin: 50px auto;
+            padding: 50px 100px;
+            background-color: #900;
+            color: white;
+
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+
+            display: flex;
+            flex-direction: column;
+        }
+        .banner p{
+            text-align: left; /* 左对齐 */
+            text-indent: 2em; /* 首行缩进2字符 */
+    
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .banner h1 {
+            align-self: center; /* h1水平居中 */
+            margin: 80px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .image1 {
+            height: 300px;
+            background-color: #ddd;
+            background-image: url(./picture/jgs.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .image2 {
+            height: 300px;
+            background-color: #ddd;
+            background-image: url(./picture/ya.jpg);
+            background-size: cover;
+            background-position: center;
+        }        
+        .image3 {
+            height: 300px;
+            background-color: #ddd;
+            background-image: url(./picture/qsqy.jpg);
+            background-size: cover;
+            background-position: center;
+        }        
+        .image4 {
+            height: 300px;
+            background-color: #ddd;
+            background-image: url(./picture/fzm.jpg);
+            background-size: cover;
+            background-position: center;
+        }        
+        .image5 {
+            height: 300px;
+            background-color: #ddd;
+            background-image: url(./picture/gxy.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .image6 {
+            height: 300px;
+            background-color: #ddd;
+            background-image: url(./picture/hsjs.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .article-content {
+            padding: 20px;
+        }
+        .article-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #c00;
+        }
+        .article-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .read-more {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #c00;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .read-more:hover {
+            background-color: #900;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .banner h1 {
+                font-size: 28px;
+            }
+        }
+
+        .friend-links h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .friend-links ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .friend-links li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .friend-links a {
+            color: #06c;
+            text-decoration: none;
+        }
+
+        .friend-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="Gjgs.html">革命历史</a></li>
+                    <li><a href="Pfzm.html">英雄人物</a></li>
+                    <li><a href="J.html">红色精神</a></li>
+                    <li><a href="index.html">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        <p>宣传红色文化，其重要性深远而重大，是关乎国家根基、民族灵魂和未来发展的一项战略性工程。</p>
+        <p>首先，宣传红色文化是坚定文化自信、筑牢民族精神支柱的核心。红色文化诞生于中国共产党领导人民进行革命、建设和改革的伟大实践中，蕴含着井冈山精神、长征精神、延安精神等一系列宝贵的精神财富。它们是中华民族在危难时刻自强不息、团结奋斗的真实写照。通过宣传，能让人们深刻理解今日和平与发展的来之不易，从历史中汲取力量，增强作为中国人的志气、骨气和底气，从而坚定对自身文化生命力的强大信心。</p>
+        <p>其次，它是传承红色基因、确保事业薪火相传的根本途径。一个民族、一个政党，要永葆生机活力，就必须有代代相传的精神密码。宣传红色文化，就是将革命先辈忠于信仰、无私奉献、艰苦奋斗的崇高品格和价值追求，传递给年轻一代。通过讲述英雄故事、重走红色足迹，让青少年在情感上产生共鸣，在思想上受到洗礼，从而自觉将个人理想融入国家和民族的事业中，确保党和人民的事业后继有人。</p>
+        <p>再者，宣传红色文化是凝聚社会共识、推动社会进步的强大动力。红色文化中所体现的团结一心、攻坚克难、开拓创新的精神，是克服任何艰难险阻的制胜法宝。在新时代推进中国式现代化的征程上，我们依然会面临各种风险挑战。宣传和弘扬红色文化，能够激发全体人民的奋斗热情和创造活力，形成心往一处想、劲往一处使的强大合力，为实现中华民族伟大复兴提供不竭的精神动力。</p>
+        <p>最后，宣传红色文化也是塑造国家记忆、承担历史责任的必然要求。它提醒我们铭记历史、缅怀先烈，是对历史的尊重，更是对未来的负责。通过持续的宣传，让国家的历史记忆鲜活起来，让民族精神的高地更加坚实，从而引导全社会更好地珍惜当下，开创未来，共同书写新时代的辉煌篇章。</p>
+        <h3>此网站为宣传红色文化贡献一份力量，让更多的人能够认识历史，缅怀先烈。</h3>
+        <h1>不忘初心，牢记使命。铭记历史，振兴中华。</h1>
+    </div>
+
+
+    <div class="container">
+        <div class="articles">
+            <div class="article-card">
+                <div class="image1"></div>
+                <div class="article-content">
+                    <h3>井冈山革命根据地的建立</h3>
+                    <p>井冈山革命根据地是中国共产党建立的第一个农村革命根据地，为中国革命开辟了农村包围城市、武装夺取政权的正确道路...</p>
+                    <a href="Gjgs.html" class="read-more">阅读全文</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="image2"></div>
+                <div class="article-content">
+                    <h3>延安革命根据地的建立</h3>
+                    <p>民国二十六年（1937年），中共中央进驻延安以后，在此召开过许多具有重大历史意义的会议，制定了中国革命的正确路线和策略...</p>
+                    <a href="Gya.html" class="read-more">阅读全文</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="image3"></div>
+                <div class="article-content">
+                    <h3>秋收起义</h3>
+                    <p>土地革命战争时期，中国共产党在湖南、江西两省边界地区领导农民自卫军、工人纠察队和革命士兵举行的武装起义...</p>
+                    <a href="Gqs.html" class="read-more">阅读全文</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="image4"></div>
+                <div class="article-content">
+                    <h3>方志敏</h3>
+                    <p>方志敏（1899年8月21日～1935年8月6日），原名远镇，乳名正鹄，号慧生，江西弋阳人，无产阶级革命家、军事家...</p>
+                    <a href="Pfzm.html" class="read-more">阅读全文</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="image5"></div>
+                <div class="article-content">
+                    <h3>关向应</h3>
+                    <p>关向应（1902年9月10日～1946年7月21日），辽宁省金县（今大连市金州区）人，满姓瓜尔佳氏...</p>
+                    <a href="Pgxy.html" class="read-more">阅读全文</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="image6"></div>
+                <div class="article-content">
+                    <h3>红色精神</h3>
+                    <p>红色精神是中国共产党在革命、建设和改革实践中形成的宝贵精神财富，具有坚定理想信念、凝聚奋斗力量...</p>
+                    <a href="J.html" class="read-more">阅读全文</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="friend-links">
+            <h3>相关链接</h3>
+            <ul>
+                <li><a href="http://www.jb.mil.cn/" title="链接1" target="_blank">中国人民革命军事博物馆</a></li>
+                <li><a href="https://www.jgsgmbwg.com/" title="链接2" target="_blank">井冈山革命博物馆</a></li>
+                <li><a href="https://www.kmycjng.com/" title="链接3" target="_blank">抗美援朝纪念馆</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <p>© 2025 红色文化宣传网 版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>
